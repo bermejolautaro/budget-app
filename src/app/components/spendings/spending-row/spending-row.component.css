@@ -1,0 +1,55 @@
+.input-group-text.table-input {
+    width: 100%;
+    text-align: left;
+    align-self: center;
+}
+
+.input-group-text.table-textarea {
+    width: 100%;
+    text-align: left;
+    min-height: 4em;
+    white-space: normal;
+}
+
+.table-cell {
+    align-self: center;
+    justify-self: center;
+}
+
+.green-bg {
+    background-color: #77dd77;
+}
+
+.red-bg {
+    background-color: #ff6961;
+}
+
+.green-bg:hover {
+    background-color: #64bd64;
+}
+
+.red-bg:hover {
+    background-color: #e45048;
+}
+
+.table-row {
+    padding: 0.8em;
+    border-top: 1px solid rgb(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.table-row.editing {
+    margin: 0;
+    border-radius: 0;
+    cursor: auto;
+}
+
+.action-row {
+    padding: 0.5em 0.8em;
+    background-color: #424242;
+    margin: 0;
+}
+    
+.action-button {
+    margin-left: 0.4em;
+}
