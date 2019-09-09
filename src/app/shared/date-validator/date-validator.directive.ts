@@ -9,13 +9,14 @@ import * as moment from 'moment';
 export class DateValidatorDirective implements Validator {
   @Input('appDateValidator') format: string;
  
-  validate(control: AbstractControl) : {[key: string] : any} | null {
+  public validate(control: AbstractControl): {[key: string] : any} | null {
     return this.format ? dateValidator(this.format)(control) : null;
   }
 }
 
 export function dateValidator(format: string): ValidatorFn {
   return (control: AbstractControl): {[key: string]: any} | null => {
-    return moment(control.value, format, true).isValid() ? null : {'invalidDate': {value: control.value}};
+    const date = control.value;
+    return moment(date, format, true).isValid() ? null : {'invalidDate': {value: date}};
   };
 }

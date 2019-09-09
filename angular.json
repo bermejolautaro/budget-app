@@ -23,8 +23,7 @@
               "src/assets"
             ],
             "styles": [
-              "node_modules/open-iconic/font/css/open-iconic-bootstrap.css",
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/normalize.css/normalize.css",
               "src/styles.css"
             ],
             "scripts": [],
@@ -134,5 +133,10 @@
       }
     }
   },
-  "defaultProject": "budget-app-ui"
+  "defaultProject": "budget-app-ui",
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
+  }
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Spending } from '../../../models/Spending'
+import { Spending } from '../../../../models/Spending'
 import { SpendingsService } from 'src/app/services/spendings.service';
 import * as moment from 'moment';
 
@@ -7,7 +7,7 @@ import * as moment from 'moment';
 @Component({
   selector: 'app-add-spending',
   templateUrl: './add-spending.component.html',
-  styleUrls: ['./add-spending.component.css']
+  styleUrls: ['./add-spending.component.scss']
 })
 export class AddSpendingComponent implements OnInit {
 

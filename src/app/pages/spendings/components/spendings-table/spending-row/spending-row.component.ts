@@ -4,7 +4,7 @@ import { Spending } from 'src/app/models/Spending';
 @Component({
   selector: 'app-spending-row',
   templateUrl: './spending-row.component.html',
-  styleUrls: ['./spending-row.component.css']
+  styleUrls: ['./spending-row.component.scss']
 })
 export class SpendingRowComponent implements OnInit {
 
@@ -20,14 +20,14 @@ export class SpendingRowComponent implements OnInit {
     this.spending = null;
   }
 
-  ngOnInit() : void {
+  ngOnInit(): void {
   }
 
-  toggleEdit() : void {
+  toggleEdit(): void {
     this.editing = !this.editing;
   }
 
-  saveChanges(description: string, date: Date, amount: number) : void {
+  saveChanges({description, date, amount}: Spending): void {
     let inputSpending : Spending = new Spending(description, date, amount);
     this.spending = inputSpending;
     this.editing = false;

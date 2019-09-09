@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 
 import { SpendingsService } from 'src/app/services/spendings.service';
-import { Spending } from '../../../models/Spending'
+import { Spending } from '../../../../models/Spending'
 import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-spendings-table',
   templateUrl: './spendings-table.component.html',
-  styleUrls: ['./spendings-table.component.css']
+  styleUrls: ['./spendings-table.component.scss']
 })
 export class SpendingsTableComponent implements OnInit {
 
@@ -19,6 +19,6 @@ export class SpendingsTableComponent implements OnInit {
   }
 
   public ngOnInit() : void {
-    this.spendings$ = this.spendingsService.getSpendings(0, 15);
+    this.spendings$ = this.spendingsService.getSpendings(0, 10);
   }
 }
