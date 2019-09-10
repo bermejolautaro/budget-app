@@ -1,46 +1,33 @@
-.input-group-text.table-input {
-    width: 100%;
-    text-align: left;
-    align-self: center;
-}
-
-.input-group-text.table-textarea {
-    width: 100%;
-    text-align: left;
-    min-height: 4em;
-    white-space: normal;
-}
-
-.table-cell {
-    align-self: center;
-    justify-self: center;
-}
-
-.green-bg {
-    background-color: #77dd77;
-}
-
-.red-bg {
-    background-color: #ff6961;
-}
-
-.green-bg:hover {
-    background-color: #64bd64;
-}
-
-.red-bg:hover {
-    background-color: #e45048;
-}
-
-.table-row {
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fcfcfc;
     padding: 0.8em;
+
+    &:hover {
+        background-color: #ececec;
+
+    }
     cursor: pointer;
 }
 
-.table-row.editing {
-    margin: 0;
-    border-radius: 0;
-    cursor: auto;
+.amount {
+    &--text-green {
+        color: #2eeb39;
+    }
+
+    &--text-red {
+        color: #ff2525;
+    }
+}
+
+.table-row {
+    &.editing {
+        margin: 0;
+        border-radius: 0;
+        cursor: auto;
+    }
 }
 
 .action-row {

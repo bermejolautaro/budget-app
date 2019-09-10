@@ -10,20 +10,17 @@ import * as moment from 'moment';
   styleUrls: ['./add-spending.component.scss']
 })
 export class AddSpendingComponent implements OnInit {
-
-  private spendingsService : SpendingsService;
   public model : Spending;
 
-  constructor(spendingsService: SpendingsService) {
-    this.spendingsService = spendingsService; 
+  constructor(private spendingsService: SpendingsService) {
     this.model = new Spending();
   }
 
-  ngOnInit() : void {
+  ngOnInit(): void {
 
   }
 
-  onSubmit() : void {
+  onSubmit(): void {
     const {description, date, amount} = this.model;
     this.spendingsService.addSpending(new Spending(description, moment(date, 'DD/MM/YYYY').format('MM/DD/YYYY'), amount));
   }

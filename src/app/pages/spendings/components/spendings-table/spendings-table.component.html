@@ -1,35 +1,7 @@
-<div class="table-header table-row">
-  <div class="row">
-    <div class="col-1 table-cell">#</div>
-    <div class="col-3 table-cell">Fecha</div>
-    <div class="col-5 table-cell">Descripción</div>
-    <div class="col-3 table-cell">Ganancia / Perdida</div>
-  </div>
+<div *ngFor="let spending of spendings$ | async">
+  <app-spending-row #spendingRow [spending]="spending"></app-spending-row>
 </div>
-<div *ngFor="let spending of spendings$ | async;  index as i">
-  <app-spending-row #spendingRow
-                    [spending]="spending"
-                    [index]="i"
-  >
-  </app-spending-row>
-</div>
-
-<nav aria-label="Page navigation example">
-  <ul class="pagination">
-    <li class="page-item">
-      <a class="page-link" href="#" aria-label="Previous">
-        <span aria-hidden="true">&laquo;</span>
-        <span class="sr-only">Previous</span>
-      </a>
-    </li>
-    <li class="page-item"><a class="page-link" href="#">1</a></li>
-    <li class="page-item"><a class="page-link" href="#">2</a></li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
-    <li class="page-item">
-      <a class="page-link" href="#" aria-label="Next">
-        <span aria-hidden="true">&raquo;</span>
-        <span class="sr-only">Next</span>
-      </a>
-    </li>
-  </ul>
-</nav>
+<app-paginator #paginator 
+               (paginationEvent)="fetchSpendings(paginator.pageIndex, paginator.pageSize)" 
+>
+</app-paginator>

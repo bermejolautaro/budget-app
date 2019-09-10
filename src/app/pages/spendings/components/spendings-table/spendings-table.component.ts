@@ -10,15 +10,15 @@ import { Observable } from 'rxjs';
   styleUrls: ['./spendings-table.component.scss']
 })
 export class SpendingsTableComponent implements OnInit {
-
-  private spendingsService : SpendingsService;
   public spendings$ : Observable<Spending[]>;
 
-  constructor(spendingsService : SpendingsService) { 
-    this.spendingsService = spendingsService;
-  }
+  constructor(private spendingsService : SpendingsService) { }
 
   public ngOnInit() : void {
     this.spendings$ = this.spendingsService.getSpendings(0, 10);
+  }
+
+  public fetchSpendings(pageindex: number, pageSize: number) {
+    this.spendings$ = this.spendingsService.getSpendings(pageindex, pageSize);
   }
 }

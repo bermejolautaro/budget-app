@@ -17,6 +17,7 @@ import { SpendingCellComponent } from './pages/spendings/components/spendings-ta
 import { DateValidatorDirective } from './shared/date-validator/date-validator.directive';
 import { AddSpendingButtonComponent } from './pages/spendings/components/add-spending-button/add-spending-button.component';
 import { ModalComponent } from './shared/modal/modal.component';
+import { PaginatorComponent } from './shared/paginator/paginator.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ModalComponent } from './shared/modal/modal.component';
     SpendingCellComponent,
     DateValidatorDirective,
     AddSpendingButtonComponent,
-    ModalComponent
+    ModalComponent,
+    PaginatorComponent
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebaseConfig),

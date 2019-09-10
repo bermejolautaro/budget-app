@@ -1,0 +1,13 @@
+.pagination {
+    display: flex;
+    background-color: #212529;
+
+    justify-content: space-evenly;
+    padding: 0.8em 0;
+
+    .page-link {
+        color: #fcfcfc;
+        text-decoration: none;
+        cursor: pointer;
+    }
+}

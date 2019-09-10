@@ -1,19 +1,20 @@
 <ng-container *ngIf="!editing">
-    <div [ngClass]=" spending.amount > 0 ? 'green-bg' : 'red-bg' " class="table-row">
-        <div class="row">
-            <div class="col-1 table-cell">{{ index + 1 }}</div>
-            <div class="col-3 table-cell" (click)="toggleEdit($event.target)">{{ spending.date | date: 'dd/MM/yyyy' : 'UTC' }}</div>
-            <div class="col-5 table-cell" (click)="toggleEdit($event.target)">{{ spending.description }}</div>
-            <div class="col-3 table-cell" (click)="toggleEdit($event.target)">{{ spending.amount | currency }}</div>
+    <div class="row" (click)="toggleEdit()">
+        <div class="row-left">
+            <div class="" >{{ spending.description }}</div>
+            <div class="" >{{ spending.date | date: 'dd/MM/yyyy' : 'UTC' }}</div>
+        </div>
+        <div class="row-right">
+            <div class="amount" 
+                 [ngClass]="spending.amount >= 0 ? 'amount--text-green' : 'amount--text-red'">
+                 {{ spending.amount | currency }}
+            </div>
         </div>
     </div>
 </ng-container>
 <ng-container *ngIf="editing">
-    <div [ngClass]=" spending.amount > 0 ? 'green-bg' : 'red-bg' " class="table-row editing">
+    <div class="table-row editing">
         <div class="row">
-            <div class="col-1 table-cell">
-                {{ index + 1 }}
-            </div>
             <div class="col-3 table-cell">
                 <input #date type="date" class="input-group-text table-input" [value]="spending.date | date: 'yyyy-MM-dd'"/>
             </div>

@@ -9,18 +9,16 @@ import { Spending } from 'src/app/models/Spending';
 export class SpendingRowComponent implements OnInit {
 
   @Input() public spending : Spending;
-  @Input() public index : number;
            
   public editing : boolean;
   
-
   constructor() { 
     this.editing = false;
-    this.index = 0;
     this.spending = null;
   }
 
   ngOnInit(): void {
+
   }
 
   toggleEdit(): void {
@@ -28,8 +26,7 @@ export class SpendingRowComponent implements OnInit {
   }
 
   saveChanges({description, date, amount}: Spending): void {
-    let inputSpending : Spending = new Spending(description, date, amount);
-    this.spending = inputSpending;
+    this.spending = new Spending(description, date, amount);;
     this.editing = false;
   }
 
