@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build --prod --base-href=https://bermejolautaro.github.io/budget-app/ --outputPath=/docs",
+    "build-gh": "ng build --prod --base-href=https://bermejolautaro.github.io/budget-app/ --outputPath=/docs",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
