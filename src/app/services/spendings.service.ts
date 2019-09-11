@@ -10,6 +10,7 @@ import { SpendingDTO } from '../models/SpendingDTO';
 })
 export class SpendingsService implements OnInit {
 
+  private _spendings$ : Observable<Spending[]>;
   constructor(private db : AngularFirestore) {}
 
   public ngOnInit(): void {
@@ -36,11 +37,6 @@ export class SpendingsService implements OnInit {
   private mapSpendingDTOToSpending(item : SpendingDTO) : Spending {
     let {amount, date, description} = item;
     return new Spending(description, date.toDate(), amount);
-  }
-
-  private getSpendingDTOs<T>(pageSize: number, lastItem: QueryDocumentSnapshot<T>): Observable<Spending[]> {
-    return this.db.collection<SpendingDTO>('spendings', ref => this.getSpendingsQuery(ref, pageSize, lastItem)).valueChanges()
-    .pipe(map(data => data.map(item => this.mapSpendingDTOToSpending(item))));
   }
 
   private getSpendingsQuery<T>(ref: CollectionReference, pageSize: number, lastItem: QueryDocumentSnapshot<T>): Query{

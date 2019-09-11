@@ -15,6 +15,7 @@ export class PaginatorComponent implements OnInit {
   }
 
   set pageIndex(value: number) {
+    if(this._pageIndex + value < 0) return;
     this._pageIndex = value;
     this.paginationEvent.emit();
   }

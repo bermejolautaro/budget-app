@@ -13,11 +13,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { SpendingsComponent } from './pages/spendings/spendings.component';
 import { AddSpendingComponent } from './pages/spendings/components/add-spending/add-spending.component';
 import { SpendingRowComponent } from './pages/spendings/components/spendings-table/spending-row/spending-row.component';
-import { SpendingCellComponent } from './pages/spendings/components/spendings-table/spending-row/spending-cell/spending-cell.component';
 import { DateValidatorDirective } from './shared/date-validator/date-validator.directive';
 import { AddSpendingButtonComponent } from './pages/spendings/components/add-spending-button/add-spending-button.component';
 import { ModalComponent } from './shared/modal/modal.component';
 import { PaginatorComponent } from './shared/paginator/paginator.component';
+import { EditSpendingComponent } from './pages/spendings/components/edit-spending/edit-spending.component';
 
 @NgModule({
   declarations: [
@@ -26,11 +26,11 @@ import { PaginatorComponent } from './shared/paginator/paginator.component';
     SpendingsComponent,
     AddSpendingComponent,
     SpendingRowComponent,
-    SpendingCellComponent,
     DateValidatorDirective,
     AddSpendingButtonComponent,
     ModalComponent,
-    PaginatorComponent
+    PaginatorComponent,
+    EditSpendingComponent,
   ],
   imports: [
     AngularFireModule.initializeApp(environment.firebaseConfig),

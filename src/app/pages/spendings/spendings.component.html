@@ -1,5 +1,5 @@
 <app-spendings-table></app-spendings-table>
 <app-add-spending-button (click)="modal.open()"></app-add-spending-button>
 <app-modal #modal [title]="'Agregar registro'">
-    <app-add-spending (done)="modal.close()"></app-add-spending>
+    <app-add-spending (doneEvent)="modal.close()"></app-add-spending>
 </app-modal>

@@ -1,0 +1,17 @@
+<div class="row">
+    <input #date type="date" class="input-group-text table-input" [value]="spending.date | date: 'dd/MM/yyyy' : 'UTC'"/>
+    <input #description type="text" class="input-group-text table-input" [value]="spending.description"/>
+    <input #amount type="number" class="input-group-text table-input" [value]="spending.amount"/>
+</div>
+<div class="">
+    <input  class="btn btn-secondary action-button" 
+            type="button"
+            value="Cancel"
+            (click)="cancel()"
+    />
+    <input  class="btn btn-primary action-button"
+            type="button"
+            value="Save"
+            (click)="saveChanges(description.value, date.value, amount.value)"
+    />
+</div>

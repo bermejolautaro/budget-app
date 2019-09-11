@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SpendingCellComponent } from './spending-cell.component';
+import { EditSpendingComponent } from './edit-spending.component';
 
-describe('SpendingCellComponent', () => {
-  let component: SpendingCellComponent;
-  let fixture: ComponentFixture<SpendingCellComponent>;
+describe('EditSpendingComponent', () => {
+  let component: EditSpendingComponent;
+  let fixture: ComponentFixture<EditSpendingComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SpendingCellComponent ]
+      declarations: [ EditSpendingComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SpendingCellComponent);
+    fixture = TestBed.createComponent(EditSpendingComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
