@@ -9,8 +9,6 @@ import { SpendingDTO } from '../models/SpendingDTO';
   providedIn: 'root'
 })
 export class SpendingsService implements OnInit {
-
-  private _spendings$ : Observable<Spending[]>;
   constructor(private db : AngularFirestore) {}
 
   public ngOnInit(): void {
