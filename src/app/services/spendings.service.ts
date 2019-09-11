@@ -50,14 +50,3 @@ export class SpendingsService implements OnInit {
   }
 
 }
-
-
-// return this.angularFirestore.collection<SpendingDTO>('spendings', ref => {
-//   let query : CollectionReference | Query = ref;
-//   query = query.limit(pageIndex * pageSize);
-//   lastItem$.subscribe(x => query = query.startAt(x))
-//   return query;
-// }).snapshotChanges()
-//   .pipe(
-//     map(data => data.map(item => this.mapSpendingDTOToSpending(item)))
-//   )   
